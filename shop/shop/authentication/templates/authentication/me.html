@@ -1,0 +1,63 @@
+{% extends 'authentication/index.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="container-fluid vh-100" style="margin-top:100px">
+  <div class="" style="margin-top:100px">
+      <div class="rounded d-flex justify-content-center">
+          
+
+<!-- ФОРМА АВТОРИЗАЦИИ -->
+          <div class="col-md-4 col-sm-12 shadow-lg p-5 register_form">
+              <div class="text-center">
+                  <h3 class="text-primary register_text">Мой профиль:</h3>
+              </div>
+
+                  <h2 class="text-primary username_text">Имя пользователя</h2>
+                  <form action="{% url 'main:logout' %}" method="post">
+                    {% csrf_token %}
+                      <div class="form-control">
+                         <textarea class="form-control" name="username">
+                          {{ user.username }}
+                        </textarea>
+                      </div>
+
+                  <h2 class="text-primary password_text">Ваше имя:</h2>
+                  <div class="form-control">
+                    
+                    <textarea class="form-control" type="text"  >
+                      {{ user.first_name }}
+                    </textarea>
+                  </div>
+                  
+                  <h2 class="text-primary password_text">Ваша фамилия:</h2>
+                  <div class="form-control">
+                    <textarea class="form-control" type="text"  >
+                      {{ user.last_name }}
+                    </textarea>
+                  </div>
+
+                  <h2 class="text-primary password_text">Ваш email:</h2>
+                  <div class="form-control">
+                    <textarea class="form-control" type="text" >
+                      {{ user.email }}
+                    </textarea>
+                  </div>
+
+                  <div class="d-grid col-12 mx-auto">
+                    <button class="btn button_color" type="submit"><span></span> Выйти из профиля</button>
+                  </div>
+                 
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}
+
+

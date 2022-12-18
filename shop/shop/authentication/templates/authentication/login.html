@@ -1,0 +1,78 @@
+{% extends 'authentication/index.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+<div class="container-fluid" style="margin-top:100px">
+    <div class="" style="margin-top:100px">
+        <div class="rounded d-flex justify-content-center">
+            
+
+<!-- ФОРМА АВТОРИЗАЦИИ -->
+            <div class="col-md-4 col-sm-12 shadow-lg p-5 register_form">
+                <div class="text-center">
+                    <h3 class="text-primary register_text">Уже зарегестрированы?</h3>
+                </div>
+
+
+                <div class="p-4">
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {% for error in form.non_field_errors %}
+                              {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    
+                    <!-- ИМЯ ПОЛЬЗОВАТЕЛЯ -->
+                    <h2 class="text-primary username_text">Имя пользователя</h2>
+                    <form action="{% url 'main:login' %}" method="post">
+                        {% csrf_token %}
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text username_icon"><i
+                                    class="bi bi-person-plus-fill text-white"></i></span>
+                            <input type="text" class="form-control" name="username" placeholder="Username">
+                        </div>
+
+
+                       
+                        <!-- ПАРОЛЬ -->
+                    <h2 class="text-primary password_text">Пароль</h2>
+                        <div class="input-group mb-3">
+
+                            <!-- Иконка и placeholder-->
+                            <span class="input-group-text password_icon"><i
+                                    class="bi bi-key-fill text-white"></i></span>
+                            <input type="password" class="form-control " 
+                            
+                            name="password" placeholder="Password">
+                        </div>
+
+                        <!-- КНОПКА -->
+                        <div class="d-grid col-12 mx-auto">
+                            <button class="btn button_color" type="submit"><span></span>Войти / Login</button>
+                        </div>
+                        <p class="text-center mt-3 button_text">Нет аккаунта?
+                            <a class="button_text" href="/register">Регистрация</a>
+                        </p>
+
+            
+                    </form>
+                   
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+                        

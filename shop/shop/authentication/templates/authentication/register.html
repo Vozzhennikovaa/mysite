@@ -1,0 +1,91 @@
+{% extends 'authentication/index.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<div class="container-fluid vh-100" style="margin-top:80px">
+    <div class="" style="margin-top:80px">
+        <div class="rounded d-flex justify-content-center">
+            
+            <!-- ФОРМА РЕГИСТРАЦИИ -->
+            <div class="col-md-4 col-sm-12 shadow-lg p-5 register_form">
+                <div class="text-center">
+                    <h3 class="text-primary register_text">Регистрация</h3>
+                </div>
+
+                <div class="p-4">
+                    <h2 class="text-primary name_text">Имя пользователя</h2>
+                    <form action="{% url 'main:register' %}" method="post">
+                        {% csrf_token %}
+                        <div class="input-group mb-3">
+                            <span class="input-group-text name_icon"><i class="bi bi-person-plus-fill text-white"></i></span>
+                            <input type="text" class="form-control {% if form.username.errors %}is-invalid{% endif %}" name="username" placeholder="Enter your name" value="{{ form.username.value|default_if_none:'' }}">
+                            <div class="invalid-feedback">
+                                {{ form.username.errors.0 }}
+                            </div>
+                        </div>
+                        
+                        <h2 class="text-primary name_text">Ваше имя</h2>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text name_icon"><i class="bi bi-person-plus-fill text-white"></i></span>
+                            <input type="text" class="form-control {% if form.first_name.errors %}is-invalid{% endif %}" name="first_name" placeholder="Enter your name" value="{{ form.first_name.value|default_if_none:'' }}">
+                            <div class="invalid-feedback">
+                                {{ form.first_name.errors.0 }}
+                            </div>
+                        </div>
+
+                        <h2 class="text-primary name_text">Ваша фамилия</h2>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text name_icon"><i class="bi bi-person-plus-fill text-white"></i></span>
+                            <input type="text" class="form-control {% if form.last_name.errors %}is-invalid{% endif %}" name="last_name" placeholder="Enter your lastname" value="{{ form.last_name.value|default_if_none:'' }}">
+                            <div class="invalid-feedback">
+                                {{ form.last_name.errors.0 }}
+                            </div>
+                        </div>
+                    
+                        <h2 class="text-primary mail_text">Почта</h2>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text mail_icon"><i class="bi bi-envelope text-white"></i></span>
+                            <input type="email" name="email" class="form-control {% if form.email.errors %}is-invalid{% endif %}" placeholder="Enter your Email" value="{{ form.email.value|default_if_none:'' }}">
+                            <div class="invalid-feedback">
+                                {{ form.email.errors.0 }}
+                            </div>
+                        </div>
+                    
+                        <h2 class="text-primary password_text">Пароль</h2>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text password_icon"><i class="bi bi-key-fill text-white"></i></span>
+                            <input type="password" name="password" class="form-control {% if form.password.errors %}is-invalid{% endif %}" placeholder="Enter password" value="{{ form.password.value|default_if_none:'' }}">
+                            <div class="invalid-feedback">
+                                {{ form.password.errors.0 }}
+                            </div>
+                        </div>
+
+                        <h2 class="text-primary password_text">Повторите пароль</h2>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text password_icon"><i class="bi bi-key-fill text-white"></i></span>
+                            <input type="password" name="password_confirm" class="form-control {% if form.password_confirm.errors %}is-invalid{% endif %}" placeholder="Repeat password" value="{{ form.password_confirm.value|default_if_none:'' }}">
+                            <div class="invalid-feedback">
+                                {{ form.password_confirm.errors.0 }}
+                            </div>
+                        </div>
+                        <div class="d-grid col-12 mx-auto">
+                            <button class="btn button_color" type="sybmit"><span></span>Зарегистрироваться / Register</button>
+                        </div>
+                        <p class="text-center button_text">Уже есть аккаунт?<a class="button_text" href="/login">Войти</a></p>
+
+                    </form>
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+                        
+
