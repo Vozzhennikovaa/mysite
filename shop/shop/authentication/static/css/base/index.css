@@ -1,0 +1,379 @@
+/* HEADER */
+/* Размер шапки */
+.parent{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: rgba(250, 245, 241, 1);
+  width: 100vw;
+ }
+ .childParent {
+   width: 90vw;
+   background-color: rgba(250, 245, 241, 1);
+
+ }
+/* Логотип */
+ .logo{
+ width: 60px;
+ height: 60px;
+ }
+/* Текст для шапки */
+.text{
+   font-family: 'Inter';
+   font-size: 14px;
+   line-height: 17px;
+   text-transform: uppercase;
+   color: #65350D;  
+    
+}
+ /* Текст для ссылки */
+.text a{
+  /* без подчеркивания */
+  text-decoration: none; font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #65350D;  
+}
+/* Поиск товаров */
+ .search2{
+   width: 300px;
+   height: 35px;
+   border: 1px solid #c5c5c5;
+   border-radius: 10px;
+ }
+ ::placeholder {
+  padding-left: 10px;
+  font-size: 12px;
+
+}
+ .b{
+   width: 20px;
+   height: 20px;
+ }
+ nav {
+   display: flex;
+   justify-content: space-evenly;
+   text-align: center;
+   align-items:center;
+ }
+
+
+/* Текст на шапке */
+.dropbtn {
+ background-color: rgba(250, 245, 241, 1);
+ color: #65350D; 
+ padding: 16px;
+ border: none;
+ font-family: 'Inter';
+ text-decoration: none;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 17px;
+   text-transform: uppercase;
+}
+.dropbtn:hover{
+  color: rgb(16, 12, 12);
+}
+/* Позиционирование выпадающих элементов*/
+.dropdown {
+ position: relative;
+ display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+ display: none;
+ position: absolute; 
+ background-color: rgba(250, 245, 241, 1);
+ min-width: 160px;
+ box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+/* Выпадающий список */
+.dropdown-content a {
+ color: #4d321b; 
+ text-align: left;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+
+ font-family: 'Inter';
+ font-size: 12px;
+ text-transform: uppercase;
+ 
+}
+/* Наведение */
+.dropdown-content a:hover {background-color: rgb(241, 216, 197);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgb(239, 226, 216);}
+
+
+
+.akeconsa-udaneles{ 
+  position: fixed; 
+  bottom: 28px; 
+  right: 28px; 
+  z-index: 9; 
+}  
+/* Стрелка */
+.akeconsa-udaneles a { 
+  height: 42px; 
+  width: 42px; 
+  text-align: center; 
+  background: #ded4ca; 
+  background-image: url('../../img/up.svg');
+  background-repeat: no-repeat;
+  background-size: 40px;
+  display: block; 
+  border-radius: 2px; 
+} 
+.akeconsa-udaneles a span {
+  color: #f7f0f0; 
+  font-size: 30px; 
+  line-height: 42px; 
+  cursor: pointer; 
+}
+
+
+
+/* Главный FOOTER */ 
+footer .main-footer{
+padding: 20px 0;
+background: #FBF4EE;
+align-items: center;
+} 
+
+/* Полоса под footer */ 
+.footer-copyright {
+background: #65350D;
+padding: 5px 0;
+}
+/* Текст на полосе */
+.footer-copyright p {
+color: #FBF4EE; 
+margin: 2px 0 0;
+}  
+
+/* Список ul  */
+footer ul{
+padding-left: 0;
+/* Чтобы не было нумерования в виде точек */
+list-style: none;
+} 
+
+/* Список  */
+.widget li a{
+text-decoration: none;
+color: #65350D;
+padding-left: 60px;
+padding-right: 60px;
+padding-top: 10px;
+} 
+/* Наведение на список */
+.widget li a:hover{
+color: #3a2510;
+} 
+
+/* Иконки оплаты */
+.footer-icons{
+padding-left: 60px;
+padding-top: 10px;
+
+}
+/* Текст "связь с нами" */
+.footer-text{
+text-decoration: none;
+color: #65350D;
+padding-left: 60px;
+padding-top: 10px;
+}
+/* Наведение на текст */
+.footer-text:hover{
+color: #ffb300;
+}
+
+/* Заголовки */
+.widget-title{
+font-size: 20px;
+color:#65350D;
+align-items: center;
+padding-top: 20px;
+padding-left: 60px;
+padding-right: 60px;
+}
+/* Линия под текстом */
+.widget-title span {
+background: #000000 none repeat scroll 0 0;
+display: block;
+height: 1px;
+margin-top: 25px;
+position: relative;
+width: 20%;
+padding-left: 60px;
+} 
+
+body {
+  background-image: url('../../img/1.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* Текст про магазин */
+.section4{
+  background-color:#f70000;
+  padding-top: -100px;
+  width: 100vw;
+  height: 40vh;
+}
+
+
+/* Заголовок секции 4 */
+.h1_section4{
+  font-size: 24px;
+  padding-top: 40px;
+  padding-left: 50px;
+}
+
+/* Разделитель между текстом и footer */
+.section5{
+  background-color:#8A6C57;
+  width: 100vw;
+  height: 5vh;
+}
+
+/* Описание магазина - текст */
+.p02{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 0.14em;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  color: #4d4d4d;
+}
+
+/* ФОРМА РЕГИСТРАЦИИ */
+
+/* Сама форма */
+.register_form{
+  background: #CAB4A7;
+  border: 1px solid #D9B8B8;
+  border-radius: 80px;
+  box-shadow: 10px 8px 200px 10px rgba(8, 6, 6, 0.632);
+}
+
+/* Цвет текста */
+.register_text{
+  font-family: 'Inter';
+  font-size: 20px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: center;
+  color :#65350D !important; 
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+
+/* Ваше имя */
+.name_text{
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: left;
+  color :#65350D !important; 
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+}
+
+/* Имя пользователя */
+.username_text{
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: left;
+  color :#65350D !important; 
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+}
+
+/* EMAIL */
+.mail_text{
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: left;
+  color :#65350D !important; 
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+}
+
+/* Текст пароль */
+.password_text{
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: left;
+  color :#65350D !important; 
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+}
+
+
+.name_icon{
+  background-color: #65350D;
+}
+.username_icon{
+  background-color: #65350D;
+}
+.mail_icon{
+  background-color: #65350D;
+}
+.password_icon{
+  background-color: #65350D;
+}
+
+.button_color{
+  background-color: #65350D;
+  color:#ffffff;
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.button_text{
+  color: #65350D;
+}
+
+
+
+.Rectangle{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(250, 245, 241, 1);
+  width: 100vw;
+  height: 500px;
+  left: 0px;
+  top: 1000px;
+  z-index: 1;}
