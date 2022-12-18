@@ -1,0 +1,191 @@
+.parent{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: rgba(250, 245, 241, 1);
+  width: 100vw;
+ }
+
+ .childParent {
+   width: 90vw;
+   background-color: rgba(250, 245, 241, 1);
+
+ }
+
+ .logo{
+ width: 60px;
+ height: 60px;
+ }
+
+ .text{
+   font-family: 'Inter';
+   font-size: 14px;
+   line-height: 17px;
+   text-transform: uppercase;
+   color:  #65350D; 
+   text-align: center;
+    
+ }
+ .text a{
+  text-decoration: none;
+  color:  #65350D; 
+ }
+
+ .search2{
+   width: 300px;
+   height: 35px;
+   border: 1px solid #c5c5c5;
+   border-radius: 10px;
+ }
+
+ ::placeholder {
+  padding-left: 10px;
+  font-size: 12px;
+
+}
+
+ .b{
+   width: 20px;
+   height: 20px;
+ }
+ nav {
+   display: flex;
+   justify-content: space-evenly;
+   text-align: center;
+   align-items:center;
+ }
+
+
+/* Dropdown Button */
+.dropbtn {
+ background-color: rgba(250, 245, 241, 1);
+ color: #65350D; 
+ padding: 16px;
+ border: none;
+ font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 17px;
+   text-transform: uppercase;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+ position: relative;
+ display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+ display: none;
+ position: absolute; 
+ background-color: rgba(250, 245, 241, 1);
+ min-width: 160px;
+ box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+/* Выпадающий список */
+.dropdown-content a {
+ color: #4d321b; 
+ text-align: left;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+
+ font-family: 'Inter';
+ font-size: 12px;
+ text-transform: uppercase;
+ 
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(241, 216, 197);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgb(239, 226, 216);}
+
+body {
+  background-image: url('../../img/1.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ФОРМА АВТОРИЗАЦИИ */
+
+/* Сама форма */
+.authentication_form{
+  background: #CAB4A7;
+  border: 1px solid #D9B8B8;
+  border-radius: 80px;
+  box-shadow: 10px 8px 200px 10px rgba(8, 6, 6, 0.632);
+}
+
+/* Цвет текста */
+.authentication_text{
+  font-family: 'Inter';
+  font-size: 20px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: center;
+  color :#65350D !important; 
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/* Текст пользователя */
+.username_text{
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: left;
+  color :#65350D !important; 
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+}
+
+/* Текст пароль */
+.password_text{
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: left;
+  color :#65350D !important; 
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+}
+
+.username_icon{
+  background-color: #65350D;
+}
+
+.password_icon{
+  background-color: #65350D;
+}
+
+.button_color{
+  background-color: #65350D;
+  color:#ffffff;
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.button_text{
+  color: #65350D;
+}
+
+
+
