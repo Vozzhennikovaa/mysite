@@ -1,0 +1,180 @@
+{% extends 'main/header.html' %}
+{% load static %}
+{% block head %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/header.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/sale.css' %}" />
+{% endblock %}
+
+
+
+{% block content %}
+<div class="envelope">
+    <div class="sentralnaya-liniya">
+        <a href="#" class="anachok-prokrus"><i class="fas fa-caret-up"></i></a> 
+    </div>
+    <div class="row kapsula-1">
+        <section>
+            <i class="icon fas fa-home"></i>
+            <div class="nosaecause">
+              {% for articles in article%}
+                <span class="title">{{articles.title}}</span>
+                
+            </div>
+            
+            <p class="sale_p">{{articles.description}}</p>
+            {%endfor%}
+        </section>
+    </div>
+    <div class="row kapsula-2">
+        <section>
+            <i class="icon fas fa-star"></i>
+            <div class="nosaecause">
+              {% for articles2 in article2%}
+                <span class="title">{{articles2.title}}</span>
+               
+            </div>
+            <p class="sale_p">{{articles2.description}}</p>
+            {%endfor%}
+
+        <input type="checkbox" id="bokovon-lodsaba" /> 
+        <div class="bokovaya-kapanel"> 
+          <label class="nogamlenu-knopki-2" for="bokovon-lodsaba">+</label>  
+
+          {% for articles4 in article4%}
+          <div class="vobocuka-kagolovok">{{articles4.title}}</div> 
+          <p>{{articles4.description}}</p> 
+          {%endfor%}
+
+          <div class="nogamlenu-knopki-1-wr"> 
+            <label class="nogamlenu-knopki-1" for="bokovon-lodsaba"> 
+            <a class="side-b side-open table" href="{% url 'main:information' %}">Смотреть таблицу</a> 
+            
+            </label> 
+          </div>
+        </div> 
+        
+        <div class="nogamlenu-knopki-1-wr"> 
+          <label class="nogamlenu-knopki-1" for="bokovon-lodsaba"> 
+          <div class="side-b side-open">Таблица размеров</div> 
+          <div class="side-b side-close">Закрыть</div> 
+          </label> 
+        </div>
+           
+        </section>
+
+        
+    </div>
+    <div class="row kapsula-1">
+        <section>
+            <i class="icon fas fa-rocket"></i>
+            <div class="nosaecause">
+              {% for articles3 in article3%}
+                <span class="title">{{articles3.title}}</span>
+               
+            </div>
+            <p class="sale_p">{{articles3.description}}</p>
+            {%endfor%}
+        </section>
+    </div>
+
+</div>
+
+
+<section class="section1">
+    <p class="text2">Женские платья </p>
+    <hr class="hr2">
+    <div class="images2">
+      <div class="car">
+        <a href="{% url 'main:dresses_list' %}"><img src="../../static/img/платье_черное.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:dresses_list' %}">Хлопковое платье ASHMOT</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:dresses_list' %}">9990</a>
+      
+      </div>
+      <div class="car">
+        <a href="{% url 'main:dresses_list' %}"><img src="../../static/img/платье_беж.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:dresses_list' %}">Шёлковое платье</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:dresses_list' %}">7990</a>
+      </div>
+
+      <div class="car">
+        <a href="{% url 'main:dresses_list' %}"><img src="../../static/img/платье_белое.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:dresses_list' %}">Женское платье</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:dresses_list' %}">8990</a>
+      </div>
+    </div>
+</section>
+
+<section class="section2">
+    <p class="text2">Жакеты</p>
+    <hr class="hr2">
+    <div class="images2">
+      <div class="car">
+        <a href="{% url 'main:jackets_list' %}"><img src="../../static/img/жакет.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:jackets_list' %}">Шерстяной жакет</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:jackets_list' %}">10990</a>
+      </div>
+      <div class="car">
+        <a href="{% url 'main:jackets_list' %}"><img src="../../static/img/жакет_клетка.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:jackets_list' %}">Хлопковый жакет</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:jackets_list' %}">13990</a>
+      </div>
+      <div class="car">
+        <a href="{% url 'main:jackets_list' %}"><img src="../../static/img/жакет_классика.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:jackets_list' %}">Жакет классический</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:jackets_list' %}">7990</a>
+      </div>
+    </div>
+</section>
+
+<section class="section3">
+    <p class="text2">Аксессуары</p>
+    <hr class="hr2">
+    <div class="images2">
+      <div class="car">
+        <a href="{% url 'main:glasses_list' %}"><img src="../../static/img/оправа_очки.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:glasses_list' %}">Оправа</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:glasses_list' %}">3990</a>
+      </div>
+      <div class="car">
+        <a href="{% url 'main:accessories_list' %}"><img src="../../static/img/серьги.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:accessories_list' %}">Серьги женские</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:accessories_list' %}">6990</a>
+      </div>
+      <div class="car">
+        <a href="{% url 'main:accessories_list' %}"><img src="../../static/img/03.png" alt=""></a>
+        <p></p>
+        <a class="text1" href="{% url 'main:accessories_list' %}">Чокер на шею</a>
+        <hr class="hr3">
+        <a class="text02" href="{% url 'main:accessories_list' %}">7990</a>
+      </div>
+    </div>
+</section>
+
+{% for articles in article%}
+<section class="section4"> 
+<h1 class="h1_section4">{{articles.title}}</h1>
+<dib class="p02">{{articles.description}}</dib>
+</section>
+{%endfor%}
+
+
+
+{% endblock %}
+

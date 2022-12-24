@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#a06b4a" />
+    <title>ASHMOT</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    {% block head %}
+    {% endblock %}
+  </head>
+<body>
+ 
+  <div class="parent">
+    <div class="childParent">
+      <nav>
+        <a href="{% url 'main:home' %}"><img class="logo" src="../../static/img/Logo.pdf" alt=""></a>
+        <div class="text">
+          <a href="{% url 'main:home' %}">Главная</a>
+        </div> 
+        <div class="text"> 
+          <a href="{% url 'main:sale' %}">Sale</a>
+        </div>
+        <!-- Одежда -->
+        <div class="dropdown">
+          <a class="dropbtn" href="{% url 'main:clothes_list' %}" >Одежда</a>
+            <div class="dropdown-content">
+              <a href="{% url 'main:dresses_list' %}">Платья</a>
+              <a href="{% url 'main:jackets_list' %}">Жакеты</a>
+            </div>
+        </div>
+        
+        <!-- Аксессуары -->
+        <div class="dropdown">
+          <a class="dropbtn" href="{% url 'main:accessories_list' %}" >Аксессуары</a>
+            <div class="dropdown-content">
+              <a href="{% url 'main:glasses_list' %}">Очки</a>
+              <a href="{% url 'main:bijouterie_list' %}">Бижутерия</a>
+            </div>
+        </div>
+        
+        <!-- Сумки -->
+        <div class="dropdown">
+          <a class="dropbtn" href="{% url 'main:bags_list' %}">Сумки</a>
+            <div class="dropdown-content">
+              <a href="{% url 'main:bags_list' %}">Все сумки</a>
+            </div>
+        </div>
+        
+        <!-- Информация -->
+        <div class="dropdown">
+          <a class="dropbtn" href="{% url 'main:information' %}">Информация</a>
+            <div class="dropdown-content">
+              <a href="{% url 'main:information' %}">Доставка</a>
+              <a href="{% url 'main:information' %}">Контакты</a>
+              <a href="{% url 'main:information' %}">Таблица размеров</a>
+            </div>
+        </div>
+        
+        <input class="search2" type="search" placeholder="Поиск товара">
+        
+        <a href="{% url 'main:login' %}"><img class="b" src="../../static/img/pajamas_profile.svg" alt=""></a>
+        <a href="{% url 'cart:like_detail' %}"><img class="b" src="../../static/img/heart1.svg" alt=""></a> 
+        <!-- <a href="{% url 'main:basket22' %}"><img class="b" src="../../static/img/basket2.svg" alt=""></a>  -->
+         <a href="{% url 'main:product_list' %}"><img class="b" src="../../static/img/basket2.svg" alt=""></a>
+      </nav>
+    </div>
+  </div> 
+  
+{% if request.path == '/cart/orders_buy' %}
+{% elif request.path == '/orders_buy' %}
+{%else %}
+<div class="mainbk"> 
+</div>
+{% endif %}
+  
+  
+  {% block content %}
+  
+  {% endblock %}
+  
+  {% if request.path == '/register' %}
+  {% elif request.path == '/login' %}
+  
+  {%else %}
+  <section class="section5">
+  </section>
+  {% endif %}
+
+<!-- FOOTER -->
+<footer id="footer" class="footer-1">
+  <div class="main-footer widgets-dark typo-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget subscribe no-box">
+            <h5 class="widget-title">КАТАЛОГ<span></span></h5>
+            <ul class="thumbnail-widget">
+              <li>
+                <div class="thumb-content"><a href="{% url 'main:home' %}">Главная</a></div>  
+              </li>
+              <li> 
+                <div class="thumb-content"><a href="{% url 'main:sale' %}">Sale</a></div>  
+              </li> 
+              <li> 
+                <div class="thumb-content"><a href="{% url 'main:clothes_list' %}">Одежда</a></div>  
+              </li> 
+              <li> 
+                <div class="thumb-content"><a href="{% url 'main:accessories_list' %}">Аксессуары</a></div>  
+              </li>
+              <li> 
+                <div class="thumb-content"><a href="{% url 'main:bags_list' %}">Сумки</a></div>  
+              </li>
+              <li> 
+                <div class="thumb-content"><a href="{% url 'main:information' %}">Информация</a></div>  
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget no-box">
+            <h5 class="widget-title">ИНФОРМАЦИЯ<span></span></h5>
+            <ul class="thumbnail-widget">
+              <li> 
+                <div class="thumb-content"><a href="#.">Доставка</a></div>  
+              </li> 
+              <li> 
+                <div class="thumb-content"><a href="#.">Контакты</a></div>  
+              </li> 
+              <li> 
+                <div class="thumb-content"><a href="#.">Таблица размеров</a></div>  
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget no-box">
+            <h5 class="widget-title">НАША КОМАНДА<span></span></h5>
+            <ul class="thumbnail-widget">
+              <li> 
+                <div class="thumb-content"><a href="{% url 'main:information' %}">Дизайнер</a></div>  
+              </li> 
+              <li> 
+                <div class="thumb-content"><a href="{% url 'main:information' %}">Администратор</a></div>  
+              </li> 
+              <li> 
+                <div class="thumb-content"><a href="{% url 'main:information' %}">Модератор</a></div>  
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget no-box">
+            <h5 class="widget-title">СВЯЗЬ С НАМИ<span></span></h5> 
+            <p><a href="mailto:angelina.vozzhennikowa@yandex.ru" title="glorythemes" class="footer-text">ashmot@yandex.ru</a></p>
+            <p><a href="mailto:angelina.vozzhennikowa@yandex.ru" title="glorythemes" class="footer-text">ashmot@yandex.ru</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="p_footer">Copyright ASHMOT © 2022. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+<!-- Стрелка вверх -->
+<div class="akeconsa-udaneles">
+    <a href="#" title="Поднять страницы на сайтах вверх"><span class="fas fa-angle-up"></span></a> 
+</div>
+
+
+</body>
+</html>
+
+

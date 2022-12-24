@@ -1,0 +1,57 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}
+ Избранное
+{% endblock %}
+
+{% block content %}
+  <h1>Избранное</h1>
+  <table class="cart">
+    <thead>
+      <tr>
+        <th>Картинка</th>
+        <th>Товар</th>
+        <th>Кол-во</th>
+        <th>Цена за шт</th>
+        <th>Удалить</th>
+        <th></th>
+       
+     
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in cart %}
+        {% with product=item.product %}
+          <tr>
+            <td>
+              <a href="{{ product.get_absolute_url }}">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+              </a>
+            </td>
+            <td>{{ product.name }}</td>
+           
+            <td>
+              {{ item.quantity }}
+            </td>
+            <td class="num">${{ item.price }}</td>
+            <td><a href="{% url 'cart:like_remove' product.id %}">Удалить</a></td>
+        
+            <td></td>
+          </tr>
+        {% endwith %}
+      {% endfor %}
+      <tr class="total">
+        <td>Всего товаров в избарнном на</td>
+        <td colspan="4"></td>
+        <td class="">${{ cart.get_total_price}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <p class="text-right">
+
+ 
+
+    <a href="#" class="button">Добавить в корзину</a>
+  </p> -->
+{% endblock %}

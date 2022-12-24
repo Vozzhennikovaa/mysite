@@ -1,0 +1,85 @@
+<!-- url basket22 - страница авторизации (имя, пароль) -->
+
+<!-- Авторизация пользователя -->
+<!-- Импорт данных из authentication/base.html -->
+{% extends 'authentication/base.html' %}
+
+<!-- Подключение css -->
+<!-- {% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base/base.css' %}" />
+{% endblock %} -->
+
+<!-- Изменнение некоторых данных  -->
+{% block content %}
+<div class="container-fluid vh-100" style="margin-top:300px">
+    <div class="" style="margin-top:200px">
+        <div class="rounded d-flex justify-content-center">
+            
+
+            <!-- ФОРМА АВТОРИЗАЦИИ -->
+            <div class="col-md-4 col-sm-12 shadow-lg p-5 authentication_form">
+                <div class="text-center">
+                    <h3 class="text-primary authentication_text">Уже зарегестрированы?</h3>
+                </div>
+
+
+                <div class="p-4">
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {% for error in form.non_field_errors %}
+                              {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    
+                    <!-- ИМЯ ПОЛЬЗОВАТЕЛЯ -->
+                    <h2 class="text-primary username_text">Имя пользователя</h2>
+
+                    <!-- Импорт функции product_list. product_list - имя url "basket" -->
+                    <form action="{% url 'main:product_list' %}" method="post">
+                        {% csrf_token %}
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text username_icon"><i
+                                    class="bi bi-person-plus-fill text-white"></i></span>
+                            <input type="text" class="form-control" name="username" placeholder="Username">
+                        </div>
+
+
+                       
+                    <!-- ПАРОЛЬ -->
+                    <h2 class="text-primary password_text">Пароль</h2>
+                        <div class="input-group mb-3">
+
+                            <!-- Иконка и placeholder-->
+                            <span class="input-group-text password_icon"><i
+                                    class="bi bi-key-fill text-white"></i></span>
+                            <input type="password" class="form-control " 
+                            
+                            name="password" placeholder="Password">
+                        </div>
+
+                        <!-- КНОПКА -->
+                        <div class="d-grid col-12 mx-auto">
+                            <button class="btn button_color" type="submit"><span></span>Войти / Login</button>
+                        </div>
+                        <p class="text-center mt-3 button_text">Нет аккаунта?
+                            <a class="button_text" href="/register">Регистрация</a>
+                        </p>
+
+            
+                    </form>
+                   
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+                    

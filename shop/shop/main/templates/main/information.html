@@ -1,0 +1,177 @@
+{% extends 'main/header.html' %}
+{% load static %}
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/header.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/information.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/sale.css' %}" />
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<!-- Наша команда -->
+
+  <h1 class="pipa">Наша команда</h1>
+
+<section class="section3">
+  <div class="okey">
+
+    <div class="sagendeasigan">
+      <img src="../../static/img/дизайнер.jpg" alt="" class="sagendeasigan_zorsanevon" />
+      <div class="konsecugecu_dagepasicun">
+        <h3>Ангелина Возженникова</h3>
+        <p>Дизайнер одежды магазина. Шьёт брендовые вещи компании. Придумывает различные новинки.</p>
+      </div> 
+    </div>
+
+    <div class="sagendeasigan">
+      <img src="../../static/img/администратор.jpg" alt="" class="sagendeasigan_zorsanevon" />
+      <div class="konsecugecu_dagepasicun">
+        <h3>Ангелина Возженникова</h3>
+        <p>Администратор магазина. Управляет персоналом и следит за качеством вещей.</p>
+      </div> 
+    </div>
+
+    <div class="sagendeasigan">
+      <img src="../../static/img/модератор.jpg" alt="" class="sagendeasigan_zorsanevon" />
+      <div class="konsecugecu_dagepasicun">
+        <h3>Ангелина Возженникова</h3>
+        <p>Модератор. Осуществляет проверку безопасности данных. Следит за соблюдением правил на общественных сетевых ресурсах. </p>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+<section class="pipa1">
+  <h1 class="pipa">Доставка</h1>
+</section>
+<section>
+  
+<div class="envelope">
+  <div class="sentralnaya-liniya">
+      <a href="#" class="anachok-prokrus"><i class="fas fa-caret-up"></i></a> 
+  </div>
+  <div class="row kapsula-1">
+      <section>
+          <i class="icon fas fa-home"></i>
+          <div class="nosaecause">
+            {% for articles8 in article8%}
+              <span class="title">{{articles8.title}}</span>
+              
+          </div>
+          
+          <p class="sale_p">{{articles8.description}}</p>
+          {%endfor%}
+      </section>
+  </div>
+  <div class="row kapsula-2">
+      <section>
+          <i class="icon fas fa-star"></i>
+          <div class="nosaecause">
+            {% for articles9 in article9%}
+              <span class="title">{{articles9.title}}</span>
+             
+          </div>
+          <p class="sale_p">{{articles9.description}}</p>
+          {%endfor%}
+      </section>
+  </div>
+
+  <div class="row kapsula-1">
+      <section>
+          <i class="icon fas fa-rocket"></i>
+          <div class="nosaecause">
+            {% for articles10 in article10%}
+              <span class="title">{{articles10.title}}</span>
+             
+          </div>
+          <p class="sale_p">{{articles10.description}}</p>
+          {%endfor%}
+      </section>
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="pipa1">
+  <h1 class="pipa">Контакты</h1>
+</section>
+
+<div class="pricingaso-tukatables">
+  <ul class="tomoregardles">
+    <li class="sentered"><b>Телефон</b></li> 
+    <li><b>+7(999)888-77-66</b></li> 
+    <li><b>+7(999)888-77-66</b></li> 
+  <li><a class="suckasate-gpapricing" href="mailto:angelina.vozzhennikowa@yandex.ru"><span class="icon-tag"></span>Позвонить</a></li> 
+  </ul> 
+  <ul class="tomoregardles"> 
+  <li class="sentered"><span class="icon-trophy" style="color:yellow"></span> <b>Почта</b></li> 
+  <li><b href="mailto:angelina.vozzhennikowa@yandex.ru">ashmot@mail.ru</b></li> 
+  <li><b href="mailto:angelina.vozzhennikowa@yandex.ru"></b></li> 
+  <li><a class="suckasate-gpapricing" href="mailto:angelina.vozzhennikowa@yandex.ru"><span class="icon-tag"></span>Написать</a></li> 
+  </ul> 
+  <ul class="tomoregardles"> 
+  <li class="sentered"><b>Социальные сети</b></li> 
+  <li class="ethighlight"><b>Инстаграм</b></li> 
+  <li><a class="suckasate-gpapricing" href="mailto:angelina.vozzhennikowa@yandex.ru"><span class="icon-tag"></span>Перейти</a></li> 
+  </ul> 
+</div>
+
+
+
+<section class="pipa2">
+  <h1 class="pipa3">Таблица размеров</h1>
+</section>
+
+<table class="karse-tablitsy">
+  <thead>
+    <tr> 
+    <th><h1>Размер</h1></th> 
+    <th><h1>40-XXS</h1></th> 
+    <th><h1>42-XS</h1></th> 
+    <th><h1>44-S</h1></th>
+    <th><h1>46-M</h1></th>
+    <th><h1>48-L</h1></th>  
+    </tr> 
+  </thead>
+  <tbody> 
+
+    <tr> 
+      <td>Объём груди</td> 
+      <td>77-80</td> 
+      <td>81-84</td> 
+      <td>85-88</td>
+      <td>89-92</td> 
+      <td>93-96</td>  
+    </tr> 
+
+    <tr> 
+      <td>Объём талии</td> 
+      <td>57-60</td> 
+      <td>61-64</td> 
+      <td>65-68</td>
+      <td>69-72</td> 
+      <td>73-76</td>  
+    </tr> 
+
+    <tr> 
+      <td>Объём бёдер</td> 
+      <td>85-88</td> 
+      <td>89-92</td> 
+      <td>93-96</td>
+      <td>97-100</td> 
+      <td>101-104</td>  
+    </tr> 
+
+
+  </tbody> 
+</table>
+
+{% endblock %}
