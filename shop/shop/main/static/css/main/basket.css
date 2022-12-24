@@ -1,0 +1,491 @@
+
+.parent{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgba(250, 245, 241, 1);
+    width: 100vw;
+   }
+  
+   .childParent {
+     width: 90vw;
+     background-color: rgba(250, 245, 241, 1);
+  
+   }
+  
+   .logo{
+   width: 60px;
+   height: 60px;
+   }
+  
+   .text{
+     font-family: 'Inter';
+     font-size: 14px;
+     line-height: 17px;
+     text-transform: uppercase;
+     color:  #65350D; 
+     text-align: center;
+      
+   }
+   .text a{
+    text-decoration: none;
+    color:  #65350D; 
+   }
+  
+   .search2{
+     width: 300px;
+     height: 35px;
+     border: 1px solid #c5c5c5;
+     border-radius: 10px;
+   }
+  
+   ::placeholder {
+    padding-left: 10px;
+    font-size: 12px;
+  
+  }
+  
+   .b{
+     width: 20px;
+     height: 20px;
+   }
+   nav {
+     display: flex;
+     justify-content: space-evenly;
+     text-align: center;
+     align-items:center;
+   }
+  
+  
+  /* Dropdown Button */
+  .dropbtn {
+   background-color: rgba(250, 245, 241, 1);
+   color: #65350D; 
+   padding: 16px;
+   border: none;
+   font-family: 'Inter';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 17px;
+     text-transform: uppercase;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+   position: relative;
+   display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+   display: none;
+   position: absolute; 
+   background-color: rgba(250, 245, 241, 1);
+   min-width: 160px;
+   box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+  }
+  
+  /* Выпадающий список */
+  .dropdown-content a {
+   color: #4d321b; 
+   text-align: left;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+  
+   font-family: 'Inter';
+   font-size: 12px;
+   text-transform: uppercase;
+   
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: rgb(241, 216, 197);}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: rgb(239, 226, 216);}
+  
+
+  .section_cart{
+    background: red;
+    height: 40px;
+  } 
+  body {
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5 , h6 {
+    font-family: 'Ubuntu', sans-serif; 
+    font-weight:normal;
+    color: #65350D;
+    margin-top: 10px;
+}
+
+/* Подпись фото */
+a {text-decoration:none;color:#65350D; }
+/* Наведение */
+a:hover {color:#000000;}
+
+.item {
+    display: grid;
+ 
+ }
+ 
+ /* Полоса корзины */
+ #subheader {
+     background:#d7c6b7;
+     color:#65350D; 
+     padding:15px 100px;
+     overflow:auto;
+ }
+ 
+ 
+ /* Товары */
+ .product-list {
+     background-color: #FBF4EE;
+     width: 80%;
+     height: 100%;
+ }
+
+
+ 
+ #sidebar {
+     background-color: #FBF4EE;
+     width:20%;
+     padding:30px 20px 0 0;
+     float:left;
+ }
+
+ #sidebar ul li.selected {
+    background:#d7c6b7;
+    border-radius:4px;
+}
+ 
+ 
+ .blabla {
+     display:grid;
+     width: 100%;
+     grid-template-columns: 1fr 1fr 1fr;
+ }
+ 
+ .product-list .item img {
+     width:70%;
+     margin-bottom:8px;
+     border: 1px solid #d5d5d5; 
+     margin-top: 20px;
+     
+ }
+
+a.button, input[type="submit"] {
+    color:#fff;
+    background:#65350D;
+    border-radius:4px;
+    padding:10px 20px;
+    font-size:14px;
+    border:0;
+}
+
+.quantity{
+    font-size: 24px;
+    color: rgb(71, 42, 19);
+}
+a.button.light {
+    color:#666;
+    background:#ededed;
+}
+
+.text-left {
+    text-align:left;
+}
+
+.text-right {
+    text-align:right;
+}
+
+table {
+    width:100%;
+    border-spacing:0;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align:left;
+    font-size:14px;
+    padding:10px;
+    margin:0;
+}
+
+tbody tr:nth-child(odd) {
+    background:#d7c6b7;
+}
+
+tbody tr.subtotal {
+    background:#ccc;
+}
+
+thead th, tbody tr.total {
+    background:#65350D;
+    color:#fff;
+    font-weight:bold;
+}
+
+table.cart {
+    margin-bottom:40px;
+}
+
+table.cart img {
+    width:180px;
+}
+
+tbody td.num {
+    text-align:left;
+}
+
+td input[type="submit"] {
+    font-size:12px;
+    padding:4px 10px;
+}
+
+form p label, form p input {
+    float:left;
+    clear:both;
+}
+
+form p label {
+    font-size:14px;
+    padding-bottom:4px;
+}
+
+form p input {
+    width:300px;
+    font-size:13px;
+    margin-bottom:10px;
+    padding:10px 12px;
+    border:0;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}
+
+ul.errorlist {
+   float:left;
+   color:#ff0000;
+   clear:both;
+   font-size:13px;
+   margin:0;
+   padding:0;
+}
+
+
+#header {
+    padding:10px 100px;
+    font-size:18px;
+    overflow:auto;
+}
+
+
+
+#subheader .cart {
+    float:right;
+    padding-top:4px;
+}
+
+#content {
+    padding:0 100px;
+    overflow:hidden;
+}
+
+
+
+.divv{
+    display: flex;
+    width: 100%;
+}
+#sidebar ul{
+    margin:0;
+    padding:0;
+}
+
+#sidebar ul li {
+    margin:0;
+    list-style:none;
+    padding:10px 14px;
+}
+
+#sidebar ul li a {
+    display:block;
+}
+
+
+
+#sidebar ul li.selected a {
+    color:rgb(0, 0, 0);
+}
+
+#main {
+    float:left;
+    width: 100vw;
+    /* margin-right:-220px; */
+    overflow:hidden;
+}
+
+
+
+.product-detail {
+    text-align:justify;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.detail{
+background-color:#ffffff;
+padding-left: 15px;
+padding-right: 25px;
+}
+
+.product-detail .price {
+    color:#333;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.product-detail img {
+    width:100wh;
+    height: 700px;
+    float:left;
+    padding:0 20px 20px 0;
+}
+
+.product-detail h1 {
+    margin-bottom:0;
+    
+}
+
+.description{
+    color: #65350D;
+}
+.product-detail h2 {
+    margin-top:5px;
+}
+
+.order-form {
+    float:left;
+}
+
+.order-info {
+    float:right;
+    width:300px;
+    background:#e94343;
+    padding:10px 20px;
+    color:#333;
+    border-bottom:4px solid #5993bb;
+}
+
+.order-info h3 {
+    color:#000000;
+}
+
+.order-info ul li {
+    margin:0;
+    padding:0;
+    font-size:14px;
+}
+
+.order-info p {
+    font-weight:bold;
+    float:right;
+}
+
+.order-info span {
+    float:right;
+}
+
+.neg {
+    color:#726d5d;
+}
+
+.languages {
+   float:right;
+   padding-top:4px;
+   font-size:14px;
+}
+
+.languages ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    float:left;
+}
+
+.languages ul li {
+    float:left;
+    margin:0 0 0 10px;
+    font-size:14px;
+}
+
+.languages p {
+    float:left;
+    margin:0;
+}
+
+.recommendations {
+    clear:both;
+}
+
+.recommendations div {
+    float:left;
+}
+
+.recommendations img {
+    width:200px
+}
+
+.recommendations p {
+    clear:both;
+}
+
+.recommendations.cart {
+    width:60%;
+    float:left;
+    overflow:auto;
+}
+
+.recommendations.cart h3 {
+    margin-top:0;
+}
+
+.recommendations.cart .item {
+    margin-right:10px;
+}
+
+.recommendations.cart img {
+    width:120px;
+}
+
+/* braintree hosted fields */
+form div.field {
+    font-size:13px;
+    color:#666;
+    width:300px;
+    height:22px;
+    margin-bottom:10px;
+    padding:6px 12px;
+    border:0;
+    background:#0a7d00;
+    color:#666;
+    border-radius:4px;
+}
+
+
+
+
+
