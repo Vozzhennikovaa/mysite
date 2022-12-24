@@ -1,0 +1,13 @@
+{% extends 'main/category/clothes.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/header.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/basket.css' %}" />
+{% endblock %}
+
+
+{% block title %}
+<div id="main" class="product-list"> 
+    <h1>{% if category %}{{ category.name }}{% else %}Очки{% endif %}</h1>
+{% endblock %}
