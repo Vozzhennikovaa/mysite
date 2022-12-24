@@ -1,0 +1,98 @@
+{% extends 'main/header.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/header.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/basket.css' %}" />
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+<div id="subheader">
+    <div class="cart">
+        {% with total_items=cart|length %}
+            {% if cart|length > 0 %}
+                В корзине:
+                <a href="{% url 'cart:cart_detail' %}">
+                    {{total_items}} шт, ${{cart.get_total_price}}
+                </a>
+            {% else %}
+                Корзина пустая
+            {% endif %}
+        {% endwith %}
+    </div>
+</div>
+
+    <div class="divv"> 
+    <div id="sidebar">
+        <h3>Категория</h3>
+        <ul>
+            
+            {% block bags %}
+
+            {% endblock %}
+
+            {% if request.path == '/bags' %}
+            {%else %}
+            <li {% if not category %}class="selected"{% endif %}>
+                <a href="{% url 'main:clothes_list' %}">Все</a>
+            </li>
+
+            
+            {% for c in categories %}
+            <li {% if category.slug == c.slug %} class="selected" {% endif %}>
+                <a href="{{c.slug}}">{{ c.name }}</a>
+            </li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+
+
+    {% block title %}
+
+    {% endblock %}
+
+    {% if request.path == '/platya' %}
+    {% elif request.path == '/zhakety' %}
+    {% elif request.path == '/accessories' %}
+    {% elif request.path == '/bags' %}
+    {% elif request.path == '/ochki' %}
+    {% elif request.path == '/bizhuteriya' %}
+    
+    
+    {%else %}
+        <div id="main" class="product-list"> 
+            <h1>{% if category %}{{ category.name }}{% else %}Одежда{% endif %}</h1>
+    {% endif %}
+
+
+        <div class="blabla">
+           {% for produc in products %}
+                {% for product in produc %}
+            <div class="item">
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="{% if product.image %} {{product.image.url}} {% else %} {% static 'img/no_image.png' %}{% endif %}">
+                </a>
+                
+                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                
+                ${{ product.price }}
+            </div>
+        
+            {% endfor %} 
+        {% endfor %} 
+
+
+        </div>
+        
+    </div>
+
+</div>
+
+{% endblock %}
+
