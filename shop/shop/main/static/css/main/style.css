@@ -1,0 +1,525 @@
+/* HEADER */
+/* Размер шапки */
+.parent{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgba(250, 245, 241, 1);
+    width: 100vw;
+   }
+   .childParent {
+     width: 90vw;
+     background-color: rgba(250, 245, 241, 1);
+ 
+   }
+ /* Логотип */
+   .logo{
+   width: 60px;
+   height: 60px;
+   }
+ /* Текст для шапки */
+   .text{
+     font-family: 'Inter';
+     font-size: 14px;
+     line-height: 17px;
+     text-transform: uppercase;
+     color: #65350D;  
+     text-decoration: none;
+      
+   }
+   /* Текст для ссылки */
+   .text a {
+    /* без подчеркивания */
+    text-decoration: none;
+    color: #65350D;  
+   }
+  /* Поиск товаров */
+   .search2{
+     width: 300px;
+     height: 35px;
+     border: 1px solid #c5c5c5;
+     border-radius: 10px;
+   }
+   ::placeholder {
+    padding-left: 10px;
+    font-size: 12px;
+
+ }
+   .b{
+     width: 20px;
+     height: 20px;
+   }
+   nav {
+     display: flex;
+     justify-content: space-evenly;
+     text-align: center;
+     align-items:center;
+   }
+   .topnav .icon{
+    display: none;
+   }
+
+
+
+
+ .dropbtn {
+  text-decoration: none;
+   background-color: rgba(250, 245, 241, 1);
+   color: #65350D; 
+   padding: 16px;
+   border: none;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 17px;
+   text-transform: uppercase;
+ }
+
+ .dropbtn:hover{
+  color:rgb(123, 68, 20);
+ }
+
+ 
+ /* Позиционирование выпадающих элементов*/
+ .dropdown {
+
+   position: relative;
+   display: inline-block;
+ }
+
+ 
+ /* Dropdown Content (Hidden by Default) */
+ .dropdown-content {
+   display: none;
+   position: absolute; 
+   background-color: rgba(250, 245, 241, 1);
+   min-width: 160px;
+   box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ /* Выпадающий список */
+ .dropdown-content a {
+   color: #4d321b; 
+   text-align: left;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+
+   font-family: 'Inter';
+   font-size: 12px;
+   text-transform: uppercase;
+   
+ }
+ /* Наведение */
+ .dropdown-content a:hover {background-color: rgb(241, 216, 197);}
+ 
+ /* Show the dropdown menu on hover */
+ .dropdown:hover .dropdown-content {display: block;}
+ 
+ /* Change the background color of the dropdown button when the dropdown content is shown */
+ .dropdown:hover .dropbtn {background-color: rgb(239, 226, 216);}
+ 
+/* Задний план фото */
+ .mainbk{
+   width: 100vw;
+   height: 60vh;
+   background-image: url('../../img/1.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+
+
+
+/* САМ БЛОК 1*/
+.images1 {
+  /* Отсуп блока сверху  */
+  padding-top: 30px;
+  width: 100%;
+  display: grid;
+  /* 2 колонки */
+  grid-template-columns: 2fr 2fr;
+}
+/* ФОТО */
+.images1 img {
+  /* Ширина и высота фото */
+  width: 70%;
+  height: 88%;
+  /* Обводка */
+  border:1px solid rgb(202, 202, 202);
+} 
+
+/* САМ БЛОК 2*/
+.images2 {
+  padding-top: 30px;
+  width: 100%;
+  display: grid;
+  /* 3 колонки */
+  grid-template-columns: repeat(3, 1fr);
+}
+/* ФОТО */
+.images2 img {
+  width: 70%;
+  height: 90%;
+  border:1px solid rgb(202, 202, 202);
+} 
+
+/* САМ БЛОК 3*/
+.images3 {
+  padding-top: 70px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/* ФОТО */
+.images3 img {
+  width: 40%;
+  height: 60%;
+} 
+
+/* Разделители */
+.hr_section1{
+  width: 380px;
+  margin: 0 auto;
+  color: #65350D; 
+  border:1px solid #65350D; 
+}
+.hr2{
+  width: 430px;
+  margin: 0 auto;
+  color: #65350D; 
+  border:1px solid #65350D; 
+}
+.hr3{
+  width: 150px;
+  margin: 0 auto;
+  color: #393939; 
+}
+
+
+/* Название товара */
+.text1{
+  /* Без подчеркивания */
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #65350D; 
+}
+/* Описание товара */
+.text02{
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #332a1e; 
+}
+/* Заголовок */
+.text2{
+  text-align: center;
+  font-family: 'Inter';
+  padding-top: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #65350D; 
+}
+
+.car{
+  text-align: center;
+  margin: 0 auto;
+  
+}
+
+
+/* НОВЫЕ ПОСТУПЛЕНИЯ */
+.section1{
+  background-position: center;
+  width: 100vw;
+  height: 120vh;
+}
+/* ПОПУЛЯРНЫЕ КАТЕГОРИИ */
+.section2{
+  background-color:#cec9af;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* Текст про магазин */
+.section4{
+  padding-top: 20px;
+  background-color:#cec9af;
+  width: 100vw;
+  height: 40vh;
+}
+
+/* @media (max-width: 1200px){
+  .container1{
+    max-width: 970px;
+  }
+  .p02{
+    max-width: 970px;
+  }
+} */
+
+/* 
+@media (max-width: 992px){
+  .container1{
+    max-width: 750px;
+    background-color: blue;
+  }
+  .p02{
+    max-width: 750px;
+    background-color: red;
+  }
+}
+
+@media (max-width: 767px){
+  .container1{
+    max-width: none;
+  }
+  .p02{
+    max-width: none;
+  }
+} */
+
+/* Заголовок секции 4 */
+.h1_section4{
+  font-size: 24px;
+  padding-top: 40px;
+  padding-left: 50px;
+}
+
+.section3{
+  background-color:#5a3110;
+  width: 100vw;
+  height: 49vh;
+}
+/* Разделитель между текстом и footer */
+.section5{
+  background-color:#ffffff;
+  width: 100vw;
+  height: 3vh;
+}
+
+/* Описание магазина - текст */
+.p02{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 0.14em;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  color: #4d4d4d;
+}
+
+/* Главный FOOTER */ 
+footer .main-footer{
+  padding: 20px 0;
+  background: #d7c6b7;
+  align-items: center;
+} 
+
+  /* Полоса под footer */ 
+.footer-copyright {
+  background: #65350D;
+  padding: 5px 0;
+}
+/* Текст на полосе */
+.footer-copyright p {
+  color: #FBF4EE; 
+  margin: 2px 0 0;
+}  
+
+/* Список ul  */
+footer ul{
+  padding-left: 0;
+  /* Чтобы не было нумерования в виде точек */
+  list-style: none;
+} 
+
+/* Список  */
+.widget li a{
+  text-decoration: none;
+  color: #65350D;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 10px;
+} 
+/* Наведение на список */
+.widget li a:hover{
+  color: #3a2510;
+} 
+
+
+/* Текст "связь с нами" */
+.footer-text{
+  text-decoration: none;
+  color: #65350D;
+  padding-left: 60px;
+  padding-top: 10px;
+}
+/* Наведение на текст */
+.footer-text:hover{
+  color: #ffb300;
+}
+
+/* Заголовки */
+.widget-title{
+  font-size: 20px;
+  color:#65350D;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+/* Линия под текстом */
+.widget-title span {
+  background: #000000 none repeat scroll 0 0;
+  display: block;
+  height: 1px;
+  margin-top: 25px;
+  position: relative;
+  width: 20%;
+  padding-left: 60px;
+} 
+
+
+html{ 
+    scroll-behavior: smooth; 
+} 
+
+.pipa{
+  padding-top: 10px;
+  font-size: 48px;
+  color:#0c224a;
+  text-align: center; 
+}
+  
+.akeconsa-udaneles{ 
+    position: fixed; 
+    bottom: 28px; 
+    right: 28px; 
+    z-index: 9; 
+} 
+/* Стрелка */
+.akeconsa-udaneles a { 
+    height: 42px; 
+    width: 42px; 
+    text-align: center; 
+    background: #ded4ca; 
+    background-image: url('../../img/up.svg');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    display: block; 
+    border-radius: 2px; 
+} 
+.akeconsa-udaneles a span {
+    color: #f7f0f0; 
+    font-size: 30px; 
+    line-height: 42px; 
+    cursor: pointer; 
+}
+
+.sagendeasigan_zorsanevon { 
+  width: 473px; 
+    height: 330px; 
+  } 
+  .sagendeasigan { 
+    position: relative; 
+    /* width: 33%;  */
+    height: 330px; 
+    max-height: 330px; 
+    margin-right: 1em; 
+    border: 1px solid #bfbaba; 
+    overflow: hidden; 
+  } 
+  .sagendeasigan:hover .konsecugecu_dagepasicun { 
+    position: absolute; 
+    top: 0; 
+    background: #74560b !important; 
+    color: #f1f1f1; 
+    height: 100%; 
+    transition: top .5s; 
+  } 
+  .sagendeasigan:hover .konsecugecu_dagepasicun h3 { 
+    color: #f7f7f7; 
+    text-shadow: 0 1px 0 #615c5c; 
+    font-size: 21px; 
+  } 
+  
+  .konsecugecu_dagepasicun { 
+    padding: 1em; 
+    top: 100%; 
+  } 
+  
+  .vesanevog-denatusum { 
+    border-radius: 100px; 
+    padding: 0; 
+    text-decoration: none; 
+    display: grid; 
+    vertical-align: middle; 
+    font: inherit; 
+    text-align: center; 
+    margin: 0; 
+    cursor: pointer; 
+    overflow: visible; 
+    padding: 9px 17px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    outline: none; 
+    transition: all 0.3s; 
+    border: 2px solid rgba(241, 233, 233, 0.59); 
+    font-size: 15px; 
+    font-size: 0.80rem; 
+    line-height: 2; 
+    letter-spacing: 0.5em; 
+    color: #f7f2f2; 
+    box-shadow: 0px 4px 11px 0px rgba(152, 149, 149, 0.24), 1px 4px 6px 0px rgba(195, 190, 190, 0.42); 
+  } 
+  .vesanevog-denatusum:hover{ 
+    background: #f8f9f9; 
+    color: #145b82; 
+  }
+
+  .okey{
+    padding-top: 30px;
+    width: 100%;
+    display: grid;
+    /* 3 колонки */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .okei img{
+    width: 100%;
+    height: 80%;
+    border:1px solid rgb(202, 202, 202);
+  }
+
+
+.p_footer{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 12px;
+  color: #383737;
+}
+
+
+

@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+*{ 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: "Poppins", sans-serif; 
+} 
+html{ 
+  scroll-behavior: smooth; 
+} 
+body{ 
+  background: #e2ddcf; 
+} 
+
+.title{
+  color: #633d1d;
+}
+.sale_li{
+  /* list-style: none; */
+  text-align: justify;
+  text-align: justify;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  color: #3e3d3d;
+}
+
+.sale_p{
+  text-align: justify;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  color: #3e3d3d;
+}
+.envelope{ 
+  max-width: 1080px; 
+  margin: 50px auto; 
+  padding: 0 20px; 
+  position: relative; 
+} 
+.envelope .sentralnaya-liniya{ 
+  position: absolute; 
+  height: 100%; 
+  width: 4px; 
+  background: #fff; 
+  left: 50%; 
+  top: 20px; 
+  transform: translateX(-50%); 
+} 
+.envelope .row{ 
+  display: flex; 
+} 
+.envelope .kapsula-1{ 
+  justify-content: flex-start; 
+} 
+.envelope .kapsula-2{ 
+  justify-content: flex-end; 
+} 
+.envelope .row section{ 
+  background: #fff; 
+  border-radius: 5px; 
+  width: calc(50% - 40px); 
+  padding: 20px; 
+  position: relative; 
+} 
+.envelope .row section::before{ 
+  position: absolute; 
+  content: ""; 
+  height: 15px; 
+  width: 15px; 
+  background: #fff; 
+  top: 28px; 
+  z-index: -1; 
+  transform: rotate(45deg); 
+} 
+.kapsula-1 section::before{ 
+  right: -7px; 
+} 
+.kapsula-2 section::before{ 
+  left: -7px; 
+} 
+.row section .icon, 
+.sentralnaya-liniya .anachok-prokrus{ 
+  position: absolute; 
+  background: #f2f2f2; 
+  height: 40px; 
+  width: 40px; 
+  text-align: center; 
+  line-height: 40px; 
+  border-radius: 50%; 
+  color: #FBF4EE; 
+  font-size: 17px; 
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05); 
+} 
+.sentralnaya-liniya .anachok-prokrus{ 
+  bottom: 0px; 
+  left: 50%; 
+  font-size: 25px; 
+  transform: translateX(-50%); 
+} 
+.kapsula-1 section .icon{ 
+  top: 15px; 
+  right: -60px; 
+} 
+.kapsula-2 section .icon{ 
+  top: 15px; 
+  left: -60px; 
+} 
+.row section .nosaecause, 
+.row section .bottom{ 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+} 
+.row section .nosaecause .title{ 
+  font-size: 22px; 
+  font-weight: 600; 
+} 
+.row section p{ 
+  margin: 10px 0 17px 0; 
+} 
+.row section .bottom a{ 
+  text-decoration: none; 
+  background: #ff7979; 
+  color: #fff; 
+  padding: 7px 15px; 
+  border-radius: 5px; 
+  /* font-size: 17px; */ 
+  font-weight: 400; 
+  transition: all 0.3s ease; 
+} 
+.row section .bottom a:hover{ 
+  transform: scale(0.97); 
+} 
+@media(max-width: 790px){ 
+  .envelope .sentralnaya-liniya{ 
+  left: 40px; 
+  } 
+  .envelope .row{ 
+  margin: 30px 0 3px 60px; 
+  } 
+  .envelope .row section{ 
+  width: 100%; 
+  } 
+  .kapsula-1 section::before{ 
+  left: -7px; 
+  } 
+  .kapsula-1 section .icon{ 
+  left: -60px; 
+  } 
+} 
+@media(max-width: 440px){ 
+  .envelope .sentralnaya-liniya, 
+  .row section::before, 
+  .row section .icon{ 
+  display: none; 
+  } 
+  .envelope .row{ 
+  margin: 10px 0; 
+  } 
+}
+
+
+/* ПОПУЛЯРНЫЕ КАТЕГОРИИ */
+.section1{
+  background-color:#FBF4EE;
+  width: 100vw;
+  height: 100vh;
+}
+.section2{
+  background-color:#ffffff;
+  width: 100vw;
+  height: 100vh;
+}
+.section3{
+  background-color:#e2ddcf;
+  width: 100vw;
+  height: 100vh;
+}
+/* Заголовок */
+.text2{
+  text-align: center;
+  font-family: 'Inter';
+  padding-top: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #65350D; 
+}
+
+.car{
+  text-align: center;
+  margin: 0 auto;
+  
+}
+.hr2{
+  width: 430px;
+  margin: 0 auto;
+  color: #65350D; 
+  border:1px solid #65350D; 
+}
+/* САМ БЛОК 2*/
+.images2 {
+  padding-top: 30px;
+  width: 100%;
+  display: grid;
+  /* 3 колонки */
+  grid-template-columns: repeat(3, 1fr);
+}
+/* ФОТО */
+.images2 img {
+  width: 70%;
+  height: 90%;
+  border:1px solid rgb(202, 202, 202);
+} 
+
+.hr3{
+  width: 150px;
+  margin: 0 auto;
+  color: #393939; 
+}
+
+
+/* Название товара */
+.text1{
+  /* Без подчеркивания */
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #65350D; 
+}
+
+
+.text1:hover{
+  color: #ffb300;
+} 
+/* Описание товара */
+.text02{
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7e1905; 
+}
+
+.text02:hover{
+  color: #ff0000;
+} 
+
+
+
+#bokovon-lodsaba { 
+  display: none; 
+} 
+.bokovaya-kapanel { 
+  position: fixed; 
+  z-index: 999999; 
+  top: 0; 
+  left: -360px; 
+  background: #b77933; 
+  transition: all 0.5s;  
+  width: 324px; 
+  height: 100vh; 
+  box-shadow: 8px 0 32px rgba(0,0,0,0.4); 
+  color: #fdf7f7; 
+  padding: 38px 18px; 
+} 
+.vobocuka-kagolovok { 
+  font-size: 23px; 
+  padding-bottom: 8px; 
+  margin-bottom: 16px; 
+  border-bottom: 2px solid #BFE2FF; 
+} 
+/* Оформление кнопки на странице */ 
+.nogamlenu-knopki-1-wr { 
+  text-align: center;  
+} 
+.nogamlenu-knopki-1 { 
+  display: inline-block; 
+} 
+.nogamlenu-knopki-1 .side-b { 
+  margin: 8px; 
+  text-decoration: none; 
+  position: relative; 
+  font-size: 18px; 
+  line-height: 16px; 
+  padding: 8px 24px; 
+  color: #efebeb; 
+  text-transform: uppercase; 
+  background: #89692a; 
+  cursor: pointer; 
+  border: 2px solid #8c621a; 
+} 
+.nogamlenu-knopki-1 .side-b:hover, 
+.nogamlenu-knopki-1 .side-b:active, 
+.nogamlenu-knopki-1 .side-b:focus { 
+  color: #FFF; 
+} 
+.nogamlenu-knopki-1 .side-b:after, 
+.nogamlenu-knopki-1 .side-b:before { 
+  position: absolute; 
+  height: 2px; 
+  left: 50%; 
+  bottom: -6px; 
+  content: ""; 
+  transition: all 280ms ease-in-out; 
+  width: 0; 
+} 
+.nogamlenu-knopki-1 .side-open:after, 
+.nogamlenu-knopki-1 .side-open:before { 
+  background: #da8a00; 
+} 
+.nogamlenu-knopki-1 .side-close:after, 
+.nogamlenu-knopki-1 .side-close:before { 
+  background: #fb1212; 
+} 
+.nogamlenu-knopki-1 .side-b:before { 
+  top: -6px; 
+} 
+.nogamlenu-knopki-1 .side-b:hover:after, 
+.nogamlenu-knopki-1 .side-b:hover:before { 
+  width: 100%; 
+  left: 0; 
+} 
+/* Переключатели кнопки 1 */ 
+.nogamlenu-knopki-1 .side-close { 
+  display: none; 
+} 
+#bokovon-lodsaba:checked + .bokovaya-kapanel + .nogamlenu-knopki-1-wr .nogamlenu-knopki-1 .side-open { 
+  display: none; 
+} 
+#bokovon-lodsaba:checked + .bokovaya-kapanel + .nogamlenu-knopki-1-wr .nogamlenu-knopki-1 .side-close { 
+  display: block; 
+} 
+#bokovon-lodsaba:checked + .bokovaya-kapanel { 
+  left: 0; 
+} 
+/* Оформление кнопки на панели */ 
+.nogamlenu-knopki-2 { 
+  font-size: 32px; 
+  border-radius: 18px; 
+  position: absolute; 
+  z-index: 1; 
+  top: 8px; 
+  right: 8px; 
+  cursor: pointer; 
+  transform: rotate(45deg); 
+  color: #f1cdb2;  
+  transition: all 280ms ease-in-out;  
+} 
+.nogamlenu-knopki-2:hover { 
+  transform: rotate(45deg) scale(1.1);  
+  color: #f7f3f3; 
+}
+
+.widget li a:hover{
+  color: #3a2510;
+} 
+
+.table{
+color: red;
+}
+
+
+
+
+.obertka_karkas{ 
+width: 100%; 
+height: 100vh; 
+background: url("https://oboi247.ru/img/post/49/0.jpg") no-repeat top center; 
+background-size: cover; 
+} 
+
+.forma_vkhoda { 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%,-50%); 
+  max-width: 394px; 
+  width: 100%; 
+  height: auto; 
+  border-radius: 5px; 
+  padding: 38px 28px 38px 0; 
+  box-shadow: -4px -4px 11px rgb(139 139 139 / 64%), 4px 4px 9px rgb(102 112 122 / 87%);
+} 
+
+.forma_vkhoda .denotation{ 
+font-size: 32px; 
+text-transform: uppercase; 
+font-weight: bold; 
+text-align: center; 
+color: #c9c3cd; 
+margin-bottom: 35px; 
+} 
+
+.format_vkhoda{ 
+margin-bottom: 35px; 
+position: relative; 
+} 
+
+.format_vkhoda .input { 
+  width: 100%; 
+  padding: 18px; 
+  padding-left: 76px; 
+  font-size: 19px; 
+  text-align: center; 
+  border: transparent; 
+  color: #ebe5e5; 
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px; 
+  background: rgb(122 117 117 / 55%); 
+  outline: none; 
+} 
+
+.format_vkhoda:after{ 
+content: ""; 
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 10px; 
+height: 100%; 
+background: #bfb7b7; 
+} 
+
+.format_vkhoda:before{ 
+content: ""; 
+position: absolute; 
+top: 6px; 
+left: 70px; 
+width: 2px; 
+height: 80%; 
+background: #d4cfd9; 
+} 
+
+.takzhe{ 
+width: 200px; 
+background: rgba(163, 159, 159, 0.55); 
+margin: 0 auto; 
+text-align: center; 
+border-radius: 5px; 
+padding: 12px; 
+} 
+
+.takzhe a{ 
+color: #fff; 
+text-decoration: none; 
+text-transform: uppercase; 
+font-size: 24px; 
+} 
+
+.format_vkhoda .fas{ 
+position: absolute; 
+top: 18px; 
+left: 35px; 
+font-size: 20px; 
+color: #fff; 
+} 
+
+::-webkit-input-placeholder { 
+/* Chrome/Opera/Safari */ 
+color: #fff; 
+} 
+::-moz-placeholder { 
+/* Firefox 19+ */ 
+color: #fff; 
+} 
+:-ms-input-placeholder { 
+/* IE 10+ */ 
+color: #fff; 
+}
+
+
+
